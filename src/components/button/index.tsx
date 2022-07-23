@@ -1,13 +1,13 @@
 import React from 'react';
 
-class button extends React.Component {
+class Button extends React.Component {
     render() {
         return (
             <button>
-                botao
+                button
             </button>
         )
     }
 }
 
-export default button
+export default Button
