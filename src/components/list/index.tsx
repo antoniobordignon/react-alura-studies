@@ -13,7 +13,7 @@ function List() {
         time: '03:00:00'
     }]
     return (
-        <aside className='taskList'>
+        <aside className='tasksList'>
             <h2>Studies of the day</h2>
             <ul>
                 {tasks.map((item, index) => (
