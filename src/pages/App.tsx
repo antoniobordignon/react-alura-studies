@@ -9,8 +9,12 @@ function App() {
   const [tasks, setTasks] = useState<ITask[]>([]);
   const [selected, setSelected] = useState<ITask>();
 
-  function selectTask(taskSelected: ITask) { 
-    setSelected(taskSelected)
+  function selectTask(selectedTask: ITask) { 
+    setSelected(selectedTask);
+    setTasks(previousTasks => previousTasks.map(task => ({
+      ...task,
+      selected: task.id === selectedTask.id ? true : false
+    })));
   }
   return (
     <div className={style.AppStyle}>

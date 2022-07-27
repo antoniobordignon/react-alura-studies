@@ -5,7 +5,7 @@ import style from './List.module.scss';
 
 interface Props {
   tasks: ITask[],
-  selectTask: (taskSelected: ITask) => void
+  selectTask: (selectedTask: ITask) => void
 }
 
 function List({tasks, selectTask}: Props) {
