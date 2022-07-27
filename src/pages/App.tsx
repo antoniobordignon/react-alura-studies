@@ -5,14 +5,20 @@ import style from './App.module.scss';
 import Timer from '../components/timer';
 import { ITask } from '../types/task';
 
-
-
 function App() {
   const [tasks, setTasks] = useState<ITask[]>([]);
+  const [selected, setSelected] = useState<ITask>();
+
+  function selectTask(taskSelected: ITask) { 
+    setSelected(taskSelected)
+  }
   return (
     <div className={style.AppStyle}>
       <Form setTasks={setTasks}/>
-      <List tasks={tasks} />
+      <List 
+      tasks={tasks} 
+      selectTask={selectTask} 
+      />
       <Timer />
     </div>
   );
