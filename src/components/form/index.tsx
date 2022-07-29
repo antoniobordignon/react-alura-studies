@@ -33,7 +33,7 @@ function Form({ setTasks }: Props) {
         <form className={style.newTask} onSubmit={addTask}>
         <div className={style.inputContainer}>
             <label htmlFor="task">
-                add a new study
+                Add a new study
             </label>
             <input 
                 type="text"
@@ -41,7 +41,7 @@ function Form({ setTasks }: Props) {
                 id="task"
                 value={task}
                 onChange={event => setTask(event.target.value)}
-                placeholder="what do you want to learn?"
+                placeholder="What do you want to learn?"
                 required
             />
         </div>
