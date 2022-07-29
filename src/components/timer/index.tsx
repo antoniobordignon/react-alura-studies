@@ -12,6 +12,7 @@ interface Props {
 
 export default function Timer({ selected, finishTask}: Props) {
     const [time, setTime] = useState<number>();
+    const [ intervalId, setIntervalId] = useState<number>(0);
 
     useEffect(() => {
         if(selected?.time) {
@@ -19,14 +20,25 @@ export default function Timer({ selected, finishTask}: Props) {
         }
     },[selected])
 
-    function regressive(counter: number = 0) {
-        setTimeout(() => {
+    function startRegressive(counter: number = 0) {
+        let interval:any = setTimeout(() => {
             if(counter > 0) {
                 setTime(counter - 1);
-                return regressive(counter - 1);
+                return startRegressive(counter - 1);
             }
             finishTask();
         },1000); 
+        
+        setIntervalId(interval);
+    }
+
+    const Pause = () => {
+        clearInterval(intervalId);
+    }
+
+    const Reset = () => {
+        clearInterval(intervalId);
+        setTime(0);
     }
 
     return (
@@ -35,9 +47,17 @@ export default function Timer({ selected, finishTask}: Props) {
             <div className={style.clockWrapper}>
                 <Clock time={time} />
             </div>
-            <Button onClick={() => regressive(time)}>
+            <section>
+            <Button onClick={() => startRegressive(time)}>
                 Start
             </Button>
+            <Button onClick={() => Pause()}>
+                Stop
+            </Button>
+            <Button onClick={() => Reset()}>
+                Reset
+            </Button>
+            </section>
         </div>
     )
 }

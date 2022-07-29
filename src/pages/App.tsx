@@ -34,6 +34,7 @@ function App() {
   }
 
   return (
+
     <div className={style.AppStyle}>
       <Form setTasks={setTasks}/>
       <List 
