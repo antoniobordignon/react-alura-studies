@@ -14,7 +14,7 @@ export default function Item ({task, time, selected, completed, id, selectTask }
         })}>
             <h3>{task}</h3>
             <span>{time}</span>
-            {completed && <span className={style.concluded} aria-Label="task completed"></span>} 
+            {completed && <span className={style.concluded} area-Label="task completed"></span>} 
         </li>
     )
 }
