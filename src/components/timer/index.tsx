@@ -38,7 +38,9 @@ export default function Timer({ selected, finishTask}: Props) {
 
     const Reset = () => {
         clearInterval(intervalId);
-        setTime(0);
+        if(selected?.time) {
+        setTime(timeToSeconds(selected.time));
+        }
     }
 
     return (
