@@ -13,14 +13,27 @@ export default function Clock({ time = 0 }: Props) {
     const [secondDen, secondUnity] = String (seconds).padStart(2, '0');
     return(
         <>
+            <p className={style.clock}>
             <span className={style.clockNumber}>{hourDen}</span>
             <span className={style.clockNumber}>{hourUnity}</span>
+            </p>
+            <p className={style.clock}>
             <span className={style.clockDivision}>:</span>
+            </p>
+            <p className={style.clock}>
             <span className={style.clockNumber}>{minuteDen}</span>
             <span className={style.clockNumber}>{minuteUnity}</span>
+            </p>
+            <p className={style.clock}>
             <span className={style.clockDivision}>:</span>
+            </p>
+            <p className={style.clock}>
             <span className={style.clockNumber}>{secondDen}</span>
             <span className={style.clockNumber}>{secondUnity}</span>
+            <p className={style.clock}>
+            </p>
+            <span className={style.clockDivisionNone}>:</span>
+            </p>
         </>
     ) 
 }

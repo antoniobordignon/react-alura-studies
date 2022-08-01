@@ -2,10 +2,11 @@
     display: flex;
     flex-direction: column;
     grid-area: newTask;
-    background-color: #025951;
-    border-radius: 10px;
-    box-shadow: 2px 4px 4px #0000009F;
+    background-color: #00B4D8 ;
     padding: 10px;
+    flex-direction: flex;
+    flex-wrap: wrap;
+
   
     .inputContainer {
       display: flex;
@@ -22,10 +23,9 @@
         width: 100%;
         padding: 8px 12px 4px;
         box-sizing: border-box;
-        border: unset;
-        border-radius: 5px;
-        background-color: #02735E ;
-        box-shadow: 0px 2px 4px #2D2B2B9F inset;
+        border: unset; 
+        background-color: #0096C7 ;
+        box-shadow: 1px #2D2B2B9F inset;
         
         &::placeholder {
           color: white;
@@ -34,18 +34,18 @@
     }
   
     @media screen and (min-width: 1280px) {
-      flex-direction: row;
+      flex-direction: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
       font-size: 2.25rem;
       padding: 24px;
       box-sizing: border-box;
+
   
       .inputContainer {
-        width: calc(60% - 12px);
+        width: 100%;
   
         &:last-of-type {
-          width: 40%;
+          width: 100%;
         }
   
         label {
@@ -53,7 +53,6 @@
         }
   
         input {
-          height: 100%;
           font-size: 1.75rem;
         }
       }

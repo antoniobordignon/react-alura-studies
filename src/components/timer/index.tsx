@@ -49,7 +49,7 @@ export default function Timer({ selected, finishTask}: Props) {
             <div className={style.clockWrapper}>
                 <Clock time={time} />
             </div>
-            <section>
+            <section className={style.buttons}>
             <Button onClick={() => startRegressive(time)}>
                 Start
             </Button>
