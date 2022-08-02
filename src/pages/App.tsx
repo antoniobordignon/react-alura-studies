@@ -34,19 +34,19 @@ function App() {
   }
 
   return (
-<body>
-<div className={style.AppStyle}>
-      <Form setTasks={setTasks}/>
-      <List 
-      tasks={tasks} 
-      selectTask={selectTask} 
-      />
-      <Timer 
-        selected={selected}
-        finishTask={finishTask}
-      />
-    </div>
-</body>
+    <body>
+      <div className={style.AppStyle}>
+        <Form setTasks={setTasks}/>
+        <List 
+          tasks={tasks} 
+          selectTask={selectTask} 
+        />
+        <Timer 
+          selected={selected}
+          finishTask={finishTask}
+        />
+      </div>
+    </body>
   );
 }
 

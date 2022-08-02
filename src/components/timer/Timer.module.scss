@@ -6,7 +6,6 @@
     flex-direction: flex;
     flex-wrap: wrap;
   
-  
     .clockWrapper {
       align-items: center;
       background-color: #00B4D8;
@@ -20,6 +19,9 @@
       flex-direction: flex;
       flex-wrap: wrap;
     
+    }
+    p{
+      margin-bottom: .9em;
     }
   
     .title {
